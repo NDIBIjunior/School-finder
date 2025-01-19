@@ -1,0 +1,31 @@
+<!-- templates/registration/register.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+</head>
+<body>
+    <header>
+        <h1>Inscription to school finder</h1>
+        <nav>
+            <a href="#">Accueil D'inscription</a> |
+
+        </nav>
+    </header>
+    <hr>
+
+  <h2>Inscription</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">S'inscrire</button>
+  </form>
+
+
+<hr>
+<footer>
+    <p>&copy; 2024 Gestion des ecoles</p>
+</footer>
+</body>
+</html
