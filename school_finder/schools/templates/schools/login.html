@@ -3,11 +3,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Inscription</title>
+    <title>School finder gestion</title>
 </head>
 <body>
     <header>
-        <h1>Inscription to school finder</h1>
+        <h1>Gestion des écoles</h1>
         <nav>
             <a href="#">Accueil D'inscription</a> |
 
@@ -15,17 +15,18 @@
     </header>
     <hr>
 
-  <h2>Inscription</h2>
+  <h2>Se connecter</h2>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">S'inscrire</button>
+    <button type="submit">Se connecter</button>
   </form>
 
 
 <hr>
 <footer>
-    <p>&copy; 2025 Gestion des ecoles</p>
+    <p>&copy; 2025 Gestion des écoles</p>
 </footer>
 </body>
 </html
+

@@ -1,0 +1,11 @@
+<h1>Mon Tableau de Bord</h1>
+<a href="{% url 'add_school' %}">Ajouter une école</a>
+<ul>
+    {% for school in schools %}
+    <li>
+        {{ school.name }} ({{ school.city }}) <a href="{% url 'list_levels' school.id %}">Liste de niveaux disponibles</a> <a href="{% url 'list_exam' school.id %}">Liste des examens disponibles</a> <br>
+        <a href="{% url 'edit_school' school.id %}">Modifier</a> 
+        <a href="{% url 'delete_school' school.id %}">Supprimer</a>
+    </li>
+    {% endfor %}
+</ul>

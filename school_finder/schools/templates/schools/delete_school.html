@@ -1,0 +1,7 @@
+<h1>Supprimer {{ school.nom }}</h1>
+<p>Êtes-vous sûr de vouloir supprimer cette école ?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Oui, supprimer</button>
+    <a href="{% url 'dashboard' %}">Annuler</a>
+</form>

@@ -1,0 +1,11 @@
+<h1>Examens disponibles pour {{ school.name }}</h1>
+<h2><a href="{% url 'dashboard' %}">Dashboard</a> <br></h2>
+<a href="{% url 'add_exam' school.id %}">Ajouter un examen</a>
+<ul>
+    {% for exam in exams %}
+    <li>
+        {{ exam.name }} - Séries : {{ exam.series }} <br>
+        <a href="{% url 'edit_exam' exam.id %}">Modifier</a>
+    </li>
+    {% endfor %}
+</ul>

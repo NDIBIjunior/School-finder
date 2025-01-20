@@ -1,0 +1,12 @@
+<h1>Liste des Niveaux de l'établissement  {{ school.name }}</h1>
+<h2><a href="{% url 'dashboard' %}">Dashboard</a> <br></h2>
+
+<a href="{% url 'add_level' school.id %}">Ajouter un niveau</a>
+<ul>
+    {% for level in levels %}
+    <li>
+        Niveau: {{ level.name }} --- Prix : {{ level.prix_pension }} FCFA <br>
+        <a href="{% url 'edit_level' level.id %}">Modifier</a> <br><br>
+    </li>
+    {% endfor %}
+</ul>
